@@ -45,12 +45,12 @@ public class Board {
 		pieces[position.getRow()][position.getColumn()] = piece;
 		piece.position = position;
 	}
-	
+
 	public Piece removePiece(Position position) {
 		if (!positionExists(position)) {
 			throw new BoardException("Position not on the board");
 		}
-		if(piece(position) == null) {
+		if (piece(position) == null) {
 			return null;
 		}
 		Piece aux = piece(position);
@@ -60,7 +60,7 @@ public class Board {
 	}
 
 	private boolean positionExists(int row, int column) {
-		return row >= 0 && row < rows && columns >= 0 && column < columns;
+		return row >= 0 && row < rows && column >= 0 && column < columns;
 	}
 
 	public boolean positionExists(Position position) {
