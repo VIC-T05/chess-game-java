@@ -12,7 +12,10 @@ import chess.ChessPosition;
 import chess.Color;
 
 public class UI {
-
+	
+	
+	// ANSI escape codes for text color and background color formatting in the terminal
+	// works on Git Bash terminal
 	public static final String ANSI_RESET = "\u001B[0m";
 	public static final String ANSI_BLACK = "\u001B[30m";
 	public static final String ANSI_RED = "\u001B[31m";
@@ -72,7 +75,7 @@ public class UI {
 			}
 		} else {
 			System.out.println("CHECKMATE!");
-			System.out.println("Winner; " + chessMatch.getCurrentPlayer());
+			System.out.println("Winner: " + chessMatch.getCurrentPlayer());
 
 		}
 	}
